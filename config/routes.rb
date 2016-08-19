@@ -9,9 +9,18 @@ Development::Application.routes.draw do
   #resource de servicios
  get 'servicios/index'
 
- #resource de servicios
+ #resource de contacto
  get 'contacto/index'
 
+
+
+#resource de quienessomos
+get 'quienessomos/index'
+
+
+
+#resource de faq
+get 'faq/index' 
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
