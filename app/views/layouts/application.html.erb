@@ -8,9 +8,14 @@
 </head>
 <body>
 
+<header style="background-color:#003782;">
+      <%= image_tag("logo.png", size: "360x240", :class => "img-responsive" , :alt => "logo") %>
+</header>
+
+
 <!--  NAVEGACION -->
 <nav class="navbar navbar-default">
-  <div class="container-fluid" style="background">
+  <div class="container-fluid" style="">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -25,18 +30,18 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-        <li style="padding-right:37px;"><%= link_to "INICIO", :controller => "welcome", :action => "index" %><span class="badge" style="float:right; width:2.8em;position:absolute; top:13px; left:160px;"></span></li>
+        <li style="padding-right:37px;"> <%= link_to "INICIO", :controller => "welcome", :action => "index" %> </li>
 
-        <li style="padding-right:37px;"><%= link_to "PROYECTOS", :controller => "proyectos", :action => "index" %>  <span class="badge" style="float:right; width:2.8em;position:absolute; top:13px; left:160px;"></span></li>
+        <li style="padding-right:37px;"> <%= link_to "PROYECTOS", :controller => "proyectos", :action => "index" %></li>
 
-        <li style="padding-right:37px;"><%= link_to "SERVICIOS", :controller => "servicios", :action => "index" %>  <span class="badge" style="float:right; width:2.8em;position:absolute; top:13px; left:160px;"></span></li>
+        <li style="padding-right:37px;"> <%= link_to "SERVICIOS", :controller => "servicios", :action => "index" %></li>
 
-        <li style="padding-right:37px;"><%= link_to "CONTACTO", :controller => "contacto", :action => "index" %>  <span class="badge" style="float:right; width:2.8em;position:absolute; top:13px; left:160px;"></span></li>
+        <li style="padding-right:37px;"> <%= link_to "CONTACTO", :controller => "contacto", :action => "index" ,:style => 'color:white;'%></li>
 
-        <li style="padding-right:37px;"><%= link_to "¿QUIENES SOMOS?", :controller => "quienessomos", :action => "index" %>  <span class="badge" style="float:right; width:2.8em;position:absolute; top:13px; left:160px;"></span></li>
+        <li style="padding-right:37px;"> <%= link_to "¿QUIENES SOMOS?", :controller => "quienessomos", :action => "index" %> </li>
 
 
-        <li style="padding-right:37px;"><%= link_to "FAQ?", :controller => "faq", :action => "index" %>  <span class="badge" style="float:right; width:2.8em;position:absolute; top:13px; left:160px;"></span></li>
+        <li style="padding-right:37px;"> <%= link_to "FAQ?", :controller => "faq", :action => "index" %></li>
 
 
 <!--

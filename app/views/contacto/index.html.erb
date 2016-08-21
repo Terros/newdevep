@@ -27,21 +27,30 @@
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
-                <h3>Contact Details</h3>
+                <h3>Contacto Detalles</h3>
                 <p>
-                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                   Avenida universitaria<br>Universidad Nacional de Ingenera<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
-                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                    <abbr title="Phone">C</abbr>: (505) 2270-3880</p>
+
+                <p><i class="fa fa-phone"></i> 
+                    <abbr title="Phone">C</abbr>: (505) 2277-1513</p>
+
+                <p><i class="fa fa-mobile"></i> 
+                    <abbr title="Phone">M</abbr>: (505) 8588-6840</p>
+
+                    
                 <p><i class="fa fa-envelope-o"></i> 
-                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                    <abbr title="Email">E</abbr>: juanperez@gmail.com</a>
                 </p>
                 <p><i class="fa fa-clock-o"></i> 
-                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                    <abbr title="Hours">H</abbr>: Lunes - Viernes: 7:00 AM to 5:00 PM</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
                         <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
                     </li>
+<!--
                     <li>
                         <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
                     </li>
@@ -51,6 +60,7 @@
                     <li>
                         <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>
@@ -58,7 +68,60 @@
 
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
+
+         <div class="row" ">
+        <div class="col-md-8">
+        <h3>Envienos un correo</h3>
+            <div class="well well-sm">
+                <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Correo</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Ingresa email" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                Por</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="na" selected="">Pregunta</option>
+                                <option value="service">Sugerencia</option>
+                                <option value="suggestions">Proyecto</option>
+                                <option value="product">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Mensaje</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Mensaje"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            Enviar</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+ <!--       <div class="row">
             <div class="col-md-8">
                 <h3>Send us a Message</h3>
                 <form name="sentMessage" id="contactForm" novalidate>
@@ -88,13 +151,15 @@
                         </div>
                     </div>
                     <div id="success"></div>
-                    <!-- For success/fail messages -->
+                 >
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
 
         </div>
-        <!-- /.row -->
+       
+
+        -->
 
         <hr>
 
