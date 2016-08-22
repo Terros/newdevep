@@ -21,8 +21,8 @@ default: &default
   adapter: postgresql
   host: localhost
   encoding: unicode
-  username: postgres
-  password: amyteamo
+  username: jarvis
+  password: 123456
 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
