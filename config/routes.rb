@@ -1,4 +1,8 @@
 Development::Application.routes.draw do
+  devise_for :users
+ post 'signup' => 'devise/registrations#create', :as => :custom_user_registration
+  
+  root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -17,13 +21,13 @@ Development::Application.routes.draw do
 #resource de quienessomos
 get 'quienessomos/index'
 
-
+get 'welcome/index'
 
 #resource de faq
 get 'faq/index' 
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

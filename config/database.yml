@@ -21,8 +21,8 @@ default: &default
   adapter: postgresql
   host: localhost
   encoding: unicode
-  username: jarvis
-  password: 123456
+  username: denis 
+  password: dasdfasdf
 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,12 +48,12 @@ default: &default
 # Do not set this db to the same as development or production.
 development:  
   <<: *default
-  database:  development_development
+  database:  PICPMLN_D
 
 test:  
   <<: *default
-  database: development_test
+  database: PICPMLN_T
   
 production:  
   <<: *default
-  database: development_production
+  database: PICPMLN_P
