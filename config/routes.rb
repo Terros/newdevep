@@ -1,4 +1,6 @@
 Development::Application.routes.draw do
+  get "estadistica/index"
+  get "estadistica/show"
   devise_for :users
  post 'signup' => 'devise/registrations#create', :as => :custom_user_registration
   
@@ -25,6 +27,7 @@ get 'welcome/index'
 
 #resource de faq
 get 'faq/index' 
+
 
   # You can have the root of your site routed with "root"
  

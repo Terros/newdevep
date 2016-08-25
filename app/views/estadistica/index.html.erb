@@ -1,0 +1,15 @@
+<h1>Estadistica#index</h1>
+<p>Find me in app/views/estadistica/index.html.erb</p>
+
+<%if current_user%>
+<h1>Usted a ingresado al sistema</h1>
+<%= current_user.sign_in_count%>
+
+<h1>Usted a ingresado al sistema</h1>
+<%= current_user.remember_created_at%>
+
+<h1>la ultima conexion fue desde </h1>
+<%= current_user.inet%>
+<%else%>
+<h4>Acceso Denegado</h4>
+<%end%>

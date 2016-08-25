@@ -5,13 +5,25 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
   <p class="navbar-text pull-right">
+<% if current_user %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <!-- |-->
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> 
+<% end %>
 
 </head>
 <body>
 
 <header style="background-color:#003782;">
       <%= image_tag("logo.png", size: "100x240", :class => "img-responsive" , :alt => "logo") %>
+
+
 </header>
 
 
@@ -33,17 +45,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-       <li style="padding-right:37px;"> <%= link_to "INICIO", :controller => "welcome", :action => "index" %> </li>
+        <li style="padding-right:37px;"> <%= link_to "INICIO", :controller => "/welcome", :action => "index" %> </li>
 
-        <li style="padding-right:37px;"> <%= link_to "PROYECTOS", :controller => "proyectos", :action => "index" %></li>
+        <li style="padding-right:37px;"> <%= link_to "PROYECTOS", :controller => "/proyectos", :action => "index" %></li>
 
-        <li style="padding-right:37px;"> <%= link_to "SERVICIOS", :controller => "servicios", :action => "index" %></li>
+        <li style="padding-right:37px;"> <%= link_to "SERVICIOS", :controller => "/servicios", :action => "index" %></li>
 
-        <li style="padding-right:37px;"> <%= link_to "CONTACTO", :controller => "contacto", :action => "index" ,:style => 'color:white;'%></li>
+        <li style="padding-right:37px;"> <%= link_to "CONTACTO", :controller => "/contacto", :action => "index" ,:style => 'color:white;'%></li>
 
-        <li style="padding-right:37px;"> <%= link_to "¿QUIENES SOMOS?", :controller => "quienessomos", :action => "index" %> </li>
+        <li style="padding-right:37px;"> <%= link_to "¿QUIENES SOMOS?", :controller => "/quienessomos", :action => "index" %> </li>
 
-        <li style="padding-right:37px;"> <%= link_to "FAQ?", :controller => "faq", :action => "index" %></li>
+        <li style="padding-right:37px;"> <%= link_to "FAQ?", :controller => "/faq", :action => "index" %></li>
+
+        <li style="padding-right:37px;"> <%= link_to "Estadisticas", :controller => "/estadistica", :action => "show"%></li>
 
       
 
@@ -70,14 +84,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> 
-<% end %>
 
 <% else %>
   
@@ -111,7 +117,7 @@
 
         <li style="padding-right:37px;"> <%= link_to "FAQ?", :controller => "/faq", :action => "index" %></li>
         
-        <li style="float:left;position:absulute;"> <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+        
       
 
 <!--
@@ -211,7 +217,10 @@
         </div>
 
       </div>
+<div>
 
+<h1><a href="http://www.contadorvisitasgratis.com" title="contador de visitas"><img src="http://counter5.01counter.com/private/contadorvisitasgratis.php?c=e31c0910346bd6c7204bad9a57d5c32d" border="0" title="contador de visitas" alt="contador de visitas"></a>Contador de Visitas</h1>
+</div>
     </footer>
 
 
